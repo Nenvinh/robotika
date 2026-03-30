@@ -93,10 +93,11 @@ def turn_360_on_spot(speed=200):
             left_motor.run(speed)
             right_motor.run(-speed)
 
-            next_stop += 20  # další zastávka (40, 60, ...)
+            next_stop += 24  # další zastávka (40, 60, ...)
 
         wait(10)
-
+    
+    ev3.screen.print("Dokončeno: otačení")
     left_motor.stop()
     right_motor.stop()
 
@@ -106,3 +107,26 @@ TARGET_COLOR = choose_color()
 ev3.screen.print("Hledaná barva: ")
 ev3.screen.print(TARGET_COLOR)
 turn_360_on_spot()
+
+
+'''
+Dear programmer:
+When I wrote this code, only god and
+I knew how it worked.
+Now, only god knows it!
+ 
+Therefore, if you are trying to optimize
+this routine and it fails (most surely),
+please increase this counter as a
+warning for the next person(e.i. me):
+
+total hours wasted here = 
+
+23. 3. 2026 - 1.5h
+24. 3. 2026 - 2h (hodina robotiky)
+27. 3. 2026 - 0.5h
+30. 3. 2026 - 2h
+
+Praise the omnissiah:
+01110000 01110010 01100001 01101001 01110011 01100101 00100000 01110100 01101000 01100101 00100000 01101111 01101101 01101110 01101001 01110011 01110011 01101001 01100001 01101000
+'''
